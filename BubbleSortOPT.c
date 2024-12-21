@@ -47,7 +47,7 @@ int main (){
   printf("the array befor sorting:");
   randomly(numbers, size);
   printArray(numbers, size);
-  printf("the sotrted array\n");
+  printf("the sotrted array ( bubble sort OPT ) \n");
   BubbleSort(numbers, size);
   printArray(numbers, size);                                   
   return 0;
