@@ -11,17 +11,19 @@ void Swap(int *A, int *B) {
 }
 
 void BubbleSort(int Array [], int n ){
+ int m= n-1;
  bool change = true ; 
  int i ; 
  while (change)
  {
    change = false;
-   for (i=0 ;i<n-1 ; i++){
+   for (i=0 ;i<m ; i++){
     if (Array[i]>Array[i+1]){
        Swap(&Array[i],&Array[i+1]);
        change=true;
     }
    }
+   m--;
  }
  
 }
