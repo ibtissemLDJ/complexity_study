@@ -60,13 +60,19 @@ void QuickSort(int tab[], int p, int r) {
 int main()
 {
     srand(time(NULL));
+    clock_t t1, t2;
+    double execution_time;
     int numbers[100];
     int size = 100;
     printf("the array befor sorting:");
     randomly(numbers, size);
     printArray(numbers, size);
     printf("the sotrted array ( quick sort ) \n");
+    t1 = clock();
     QuickSort(numbers,0, size-1);
+    t2 = clock();
     printArray(numbers, size);
+    execution_time = (double)(t2 - t1)/ CLOCKS_PER_SEC;
+    printf("The execution time is  %lf seconds\n", execution_time);
     return 0;
 }
