@@ -10,20 +10,21 @@ void Swap(int *A, int *B) {
     *B = x;   
 }
 
-void BubbleSort(int Array [], int n ){
- int m= n-1;
- bool change = true ; 
- int i ; 
- while (change)
+void BubbleSortOpt(int Array [], int n ){
+ int m= n-1; //1
+ bool change = true ; //1
+ int i ; //6m+2 (m(m+1)/2)
+ while (change) // n-1
  {
-   change = false;
-   for (i=0 ;i<m ; i++){
-    if (Array[i]>Array[i+1]){
-       Swap(&Array[i],&Array[i+1]);
-       change=true;
+   change = false; //1
+   //6m
+   for (i=0 ;i<m ; i++){ //m
+    if (Array[i]>Array[i+1]){  //2
+       Swap(&Array[i],&Array[i+1]);//3
+       change=true;//1
     }
    }
-   m--;
+   m--;//1
  }
  
 }
@@ -46,12 +47,12 @@ int main (){
   double execution_time;
   int numbers [100];
   int size = 100 ; 
-  printf("the array befor sorting:");
-  randomly(numbers, size);
-  printArray(numbers, size);
-  printf("the sotrted array ( bubble sort OPT ) \n");
+  printf("the array befor sorting:");//1
+  randomly(numbers, size); //2size
+  printArray(numbers, size);//size
+  printf("the sotrted array ( bubble sort OPT ) \n");//1
   t1 = clock();
-  BubbleSort(numbers, size);
+  BubbleSortOpt(numbers, size); //
   t2 = clock();
   printArray(numbers, size);     
   execution_time = (double)(t2 - t1)/ CLOCKS_PER_SEC;
