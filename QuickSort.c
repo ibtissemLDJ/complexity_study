@@ -50,11 +50,13 @@ int partition(int tab[], int p, int r)
 
     return j;
 }
-void QuickSort(int tab[], int p, int r) {
-    if (p < r) {
-        int q = partition(tab, p, r); 
-        QuickSort(tab, p, q - 1);   
-        QuickSort(tab, q + 1, r);    
+void QuickSort(int tab[], int p, int r)
+{
+    if (p < r)
+    {
+        int q = partition(tab, p, r);
+        QuickSort(tab, p, q - 1);
+        QuickSort(tab, q + 1, r);
     }
 }
 int main()
@@ -62,17 +64,19 @@ int main()
     srand(time(NULL));
     clock_t t1, t2;
     double execution_time;
-    int numbers[100];
-    int size = 100;
+    int size;
+    printf("Enter the size of the array \n"); // 1
+    scanf("%d", &size);                       // 1
+    int numbers[size];
     printf("the array befor sorting:");
     randomly(numbers, size);
     printArray(numbers, size);
     printf("the sotrted array ( quick sort ) \n");
     t1 = clock();
-    QuickSort(numbers,0, size-1);
+    QuickSort(numbers, 0, size - 1);
     t2 = clock();
     printArray(numbers, size);
-    execution_time = (double)(t2 - t1)/ CLOCKS_PER_SEC;
+    execution_time = (double)(t2 - t1) / CLOCKS_PER_SEC;
     printf("The execution time is  %lf seconds\n", execution_time);
     return 0;
 }
