@@ -22,10 +22,10 @@ int key(int num, int digit)
 
 void SortAux(int arr[], int size, int digit)
 {
-    for (int i = 0; i < size - 1; i++)
-    {
-        for (int j = 0; j < size - i - 1; j++)
-        {
+    for (int i = 0; i < size - 1; i++)//1+ size + 2(size -1)
+    {// size
+        for (int j = 0; j < size - i - 1; j++)//1+ size-i +2(size-i-1)
+        {  // 10 size - i  
             if (key(arr[j], digit) > key(arr[j + 1], digit))
             { // 10
 
@@ -38,8 +38,8 @@ void SortAux(int arr[], int size, int digit)
 }
 void RadixSort(int arr[], int size)
 {
-    for (int i = 0; i < 3; i++)
-    {
+    for (int i = 0; i < 3; i++)//1+3 + 2*3
+    {//3 
         SortAux(arr, size, i);
     }
 }
