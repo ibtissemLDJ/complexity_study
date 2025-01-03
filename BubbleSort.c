@@ -55,10 +55,10 @@ int main()
     printf("Enter the size of the array "); // 1
     scanf("%d", &size);                     // 1
     int numbers[size];
-    printf("the array befor sorting:");             // 1
+   // printf("the array befor sorting:");             // 1
     randomly(numbers, size);                        // 2size
    // printArray(numbers, size);                      // size
-    printf("the sotrted array ( bubble sort ) \n"); /// 1
+   // printf("the sotrted array ( bubble sort ) \n"); /// 1
     t1 = clock();
     BubbleSort(numbers, size); // 6n²-5n
     t2 = clock();
