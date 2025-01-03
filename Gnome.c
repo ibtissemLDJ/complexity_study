@@ -5,21 +5,21 @@
 #include <time.h>
 void GnomeSort(int arr[], int n)
 {
-    int i = 0;
-    while (i < n - 1)
+    int i = 0; //1
+    while (i < n - 1) //(9n(n-1) /2 ) + n
     {
-        if (arr[i] <= arr[i + 1])
+        if (arr[i] <= arr[i + 1]) //2
         {
             i++;
         }
         else
         {
 
-            int temp = arr[i];
-            arr[i] = arr[i + 1];
-            arr[i + 1] = temp;
+            int temp = arr[i]; //1
+            arr[i] = arr[i + 1]; //2
+            arr[i + 1] = temp; //2
 
-            if (i > 0)
+            if (i > 0) //2
             {
                 i--;
             }

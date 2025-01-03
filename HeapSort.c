@@ -12,25 +12,26 @@ void swap(int *A, int *B)
 }
 void heapify(int arr[], int n, int i)
 {
-    int largest = i;
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
+    int largest = i; //1
+    int left = 2 * i + 1; //3
+    int right = 2 * i + 2;  //3
 
-    if (left < n && arr[left] > arr[largest])
+    if (left < n && arr[left] > arr[largest]) //3 
     {
-        largest = left;
+        largest = left;  //1
     }
 
-    if (right < n && arr[right] > arr[largest])
+    if (right < n && arr[right] > arr[largest]) //3
     {
-        largest = right;
+        largest = right; //1
     }
 
-    if (largest != i)
+    if (largest != i) //1
     {
-        swap(&arr[i], &arr[largest]);
-        heapify(arr, n, largest);
+        swap(&arr[i], &arr[largest]); //3
+        heapify(arr, n, largest); 
     }
+    
 }
 
 void heapSort(int arr[], int n)
