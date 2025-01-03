@@ -52,14 +52,14 @@ void randomly(int *arr, int size)
     }
 }
 
-void printArray(int *arr, int size)
+/*void printArray(int *arr, int size)
 {
     for (int i = 0; i < size; i++)
     {
         printf("%d ", arr[i]);
     }
     printf("\n");
-}
+}*/
 
 int main()
 {
@@ -72,12 +72,12 @@ int main()
     int numbers[size];
     printf("the array befor sorting:");           // 1 complexty
     randomly(numbers, size);                      // 3 size cpmlexity
-    printArray(numbers, size);                    // 1size complexity
+   // printArray(numbers, size);                    // 1size complexity
     printf("the sotrted array (redix sort ) \n"); // 1 complexity
     t1 = clock();
     RadixSort(numbers, size);
     t2 = clock();
-    printArray(numbers, size); // 1 size complexity
+    //printArray(numbers, size); // 1 size complexity
     execution_time = (double)(t2 - t1) / CLOCKS_PER_SEC;
     printf("The execution time is  %lf seconds\n", execution_time);
 

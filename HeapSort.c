@@ -54,14 +54,14 @@ void randomly(int *arr, int size)
     }
 }
 
-void printArray(int *arr, int size)
+/*void printArray(int *arr, int size)
 {
     for (int i = 0; i < size; i++)
     {
         printf("%d ", arr[i]);
     }
     printf("\n");
-}
+}*/
 int main()
 {
     srand(time(NULL));
@@ -73,12 +73,12 @@ int main()
     int numbers[size];
     printf("the array befor sorting:");
     randomly(numbers, size);
-    printArray(numbers, size);
+   // printArray(numbers, size);
     printf("the sotrted array ( Heap  sort ) \n");
     t1 = clock();
     heapSort(numbers, size);
     t2 = clock();
-    printArray(numbers, size);
+    //printArray(numbers, size);
     execution_time = (double)(t2 - t1) / CLOCKS_PER_SEC;
     printf("The execution time is  %lf seconds\n", execution_time);
 

@@ -39,14 +39,14 @@ void randomly(int *arr, int size)
     }
 }
 
-void printArray(int *arr, int size)
+/*void printArray(int *arr, int size)
 {
     for (int i = 0; i < size; i++)
     {
         printf("%d ", arr[i]);
     }
     printf("\n");
-}
+}*/
 
 int main()
 {
@@ -59,12 +59,12 @@ int main()
     int numbers[size];
     printf("the array befor sorting:");                 // 1
     randomly(numbers, size);                            // 2size
-    printArray(numbers, size);                          // size
+   // printArray(numbers, size);                          // size
     printf("the sotrted array ( bubble sort OPT ) \n"); // 1
     t1 = clock();
     BubbleSortOpt(numbers, size); //
     t2 = clock();
-    printArray(numbers, size);
+   // printArray(numbers, size);
     execution_time = (double)(t2 - t1) / CLOCKS_PER_SEC;
     printf("The execution time is  %lf seconds\n", execution_time);
     return 0;
